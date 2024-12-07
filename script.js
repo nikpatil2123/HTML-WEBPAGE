@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Check if GSAP is loaded
     if (window.gsap) {
-        // Animate specific elements (excluding the hero image)
+        
         gsap.from('.hover-overlay', {
             opacity: 0,
             y: 50,
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ease: 'power2.out',
         });
 
-        // Optional: You can animate other parts of the page as needed
         gsap.from('.text-center > *', {
             opacity: 0,
             y: 30,
@@ -20,14 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Handle newsletter form submission
     const form = document.getElementById('newsletterForm');
     const emailInput = document.getElementById('emailInput');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Basic email validation
+
         const email = emailInput.value;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -39,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Ensure hero image remains visible (no additional animation or hiding)
+
     const heroImage = document.querySelector('.hero-image');
     if (heroImage) {
         heroImage.style.opacity = '1'; // Ensure visibility
