@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">TRISTANA</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="product-section">
+    <!-- Product Gallery -->
+    <div class="product-gallery">
+      <div class="gallery-thumbnails">
+        <div class="placeholder">Thumbnail 1</div>
+        <div class="placeholder">Thumbnail 2</div>
+        <div class="placeholder">Thumbnail 3</div>
+        <div class="placeholder">Thumbnail 4</div>
+        <div class="placeholder">Thumbnail 5</div>
+      </div>
+      <div class="main-image">
+        <div class="placeholder-large">Main Image</div>
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="product-details">
+      <h1>T-shirt</h1>
+      <p class="price">
+        ₹ 0000  <span class="original-price">₹ 00</span> <span class="discount">SAVE 15%</span>
+      </p>
+      <div class="size-selector">
+        <label for="size">Size:</label>
+        <select id="size">
+          <option value="xs">XS</option>
+          <option value="s">S</option>
+          <option value="m">M</option>
+          <option value="l">L</option>
+          <option value="xl">XL</option>
+          <option value="xxl">XXL</option>
+        </select>
+      </div>
+      <div class="quantity-selector">
+        <label for="quantity">Quantity:</label>
+        <button class="decrement">-</button>
+        <input type="number" id="quantity" value="1" min="1">
+        <button class="increment">+</button>
+      </div>
+      <div class="add-to-cart">
+        <button>ADD TO CART</button>
+        <button>PROCEED TO BUY</button>
+      </div>
+      <section class="product-info">
+        <h2>Description</h2>
+        <p>WRITE Description HERE</p>
+        <h2>Product Care</h2>
+        <ul>
+          <li>Machine wash cold, gentle cycle</li>
+          <li>Hang dry or tumble dry low</li>
+          <li>Do not bleach</li>
+          <li>Iron on low heat if needed</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</body>
+</html>
