@@ -6,28 +6,66 @@
     <title>Tristana</title>
     <link rel="icon" href="logo (1).png" type="image/x-icon">
     
+    <!-- Tailwind CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <!-- External CSS -->
     <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="bg-white text-gray-900">
     <div id="app">
-        <!-- Navigation -->
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
-            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-                <div class="text-2xl font-bold tracking-widest">TRISTANA</div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#" class="hover:text-gray-600 transition">Collections</a>
-                    <a href="#" class="hover:text-gray-600 transition">New Arrivals</a>
-                    <a href="#" class="hover:text-gray-600 transition">About</a>
-                    <div class="flex space-x-4">
-                        <i class="fas fa-heart text-gray-700 hover:text-red-500 cursor-pointer"></i>
-                        <i class="fas fa-shopping-cart text-gray-700 hover:text-gray-500 cursor-pointer"></i>
-                    </div>
-                </div>
+        <!-- Navigation Bar -->
+        <nav class="flex items-center justify-between h-16 bg-transparent fixed top-0 left-0 right-0 z-10 px-4">            
+            <div class="flex-1 text-center">
+                <a href="index.html">
+                    <img src="Asset 2@4x.png" alt="Logo" class="h-12 mx-auto">
+                </a>
             </div>
+            <div class="hidden md:flex space-x-4">
+                <i class="fas fa-search text-white hover:text-gray-500 cursor-pointer" id="search-icon"></i>
+                <i class="fas fa-heart text-white hover:text-red-500 cursor-pointer"></i>
+                <i class="fas fa-shopping-cart text-white hover:text-gray-500 cursor-pointer"></i>
+                <i class="fas fa-bars text-white hover:text-gray-500 cursor-pointer" id="menu-icon"></i>
+                
+            </div>
+
+            
+
+                <!-- Dropdown Menu -->
+                <div class="menu-dropdown" id="menu-dropdown"> <!-- Added ID for visibility control -->
+                    <a href="#" class="hover:bg-gray-200">Home</a>
+                    <a href="#" class="hover:bg-gray-200">Shop</a>
+                    <a href="#" class="hover:bg-gray-200">About</a>
+                    <a href="#" class="hover:bg-gray-200">Contact</a>
+                </div>
+
+                  <script>
+                    const menuIcon = document.getElementById('menu-icon');
+                    const menuDropdown = document.getElementById('menu-dropdown');
+
+                    // Toggle the visibility of the menu when the icon is clicked
+                    menuIcon.addEventListener('click', () => {
+                        menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+                    });
+
+                    // Close the menu if clicked outside
+                    window.addEventListener('click', (e) => {
+                        if (!menuDropdown.contains(e.target) && e.target !== menuIcon) {
+                            menuDropdown.style.display = 'none';
+                        }
+                    });
+
+                  </script>
+            
+            
         </nav>
+        
+        
 
         <!-- Hero Section -->
         <header class="relative h-screen flex items-center justify-center">
@@ -40,10 +78,10 @@
                 <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-wider">TRISTANA</h1>
                 <p class="text-xl mb-8 max-w-2xl mx-auto">Redefining contemporary fashion with timeless elegance and modern silhouettes.</p>
                 <a 
-                    href="#" 
+                    href="grid/index.html" 
                     class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition"
                 >
-                    <a href="grid\index.html">Shop Now</a>
+                    Shop Now
                 </a>
             </div>
         </header>
@@ -56,14 +94,14 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="hover-overlay rounded-lg shadow-lg overflow-hidden">
                     <img 
-                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" 
                         alt="Collection 1"
                         class="w-full h-96 object-cover"
                     />
                 </div>
                 <div class="hover-overlay rounded-lg shadow-lg overflow-hidden">
                     <img 
-                        src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SEFOR0VSJTIwQ0xPVEh8ZW58MHx8MHx8fDA%3D" 
+                        src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=500&auto=format&fit=crop&q=60" 
                         alt="Collection 2"
                         class="w-full h-96 object-cover"
                     />
@@ -145,9 +183,7 @@
             </div>
         </footer>
     </div>
-
     <!-- External Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>

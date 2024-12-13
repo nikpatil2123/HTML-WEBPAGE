@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.from('.hover-overlay', {
             opacity: 0,
             y: 50,
-            stagger: 0.2,
-            duration: 1,
+            stagger: 0.1,
+            duration: 0.2,
             ease: 'power2.out',
         });
 
         gsap.from('.text-center > *', {
             opacity: 0,
             y: 30,
-            duration: 1.5,
+            duration: 0.2,
             ease: 'power3.out',
             stagger: 0.3,
         });
